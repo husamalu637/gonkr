@@ -7,13 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;900&display=swap" rel="stylesheet">
     <style>
         :root { --primary: #00d2ff; --accent: #ff9800; --bg: #0b0f19; --card: #161e2e; }
-        * { user-select: none; box-sizing: border-box; }
+        * { box-sizing: border-box; }
         body { background-color: var(--bg); color: white; font-family: 'Cairo', sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; overflow-x: hidden; position: relative; }
         header { width: 100%; background: linear-gradient(135deg, #00d2ff, #3a7bd5); padding: 30px 0; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.5); }
-        
-        .banner-top, .banner-bottom { width: 100%; text-align: center; background: #0a0e15; padding: 20px 0; margin: 0 auto; display: flex; justify-content: center; align-items: center; border-radius: 12px; overflow-x: auto; }
-        .banner-top { max-width: 900px; margin-top: 20px; margin-bottom: 10px; }
-        .banner-bottom { max-width: 900px; margin-top: 30px; margin-bottom: 20px; }
         
         .main-container { max-width: 900px; width: 95%; margin: 0 auto; text-align: center; }
         
@@ -23,7 +19,7 @@
         .video-wrapper-outer { position: relative; z-index: 1; }
         .video-display-area { background: #000; border-radius: 20px; overflow: hidden; border: 3px solid var(--primary); box-shadow: 0 0 30px rgba(0, 210, 255, 0.2); margin-bottom: 30px; display: none; position: relative; }
         .responsive-iframe { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
-        .responsive-iframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; overflow: hidden; pointer-events: auto; }
+        .responsive-iframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; pointer-events: auto; }
         
         .episodes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(60px, 1fr)); gap: 15px; background: var(--card); padding: 25px; border-radius: 20px; }
         .ep-btn { background: #252f44; color: white; border: 2px solid transparent; padding: 15px 0; border-radius: 12px; font-size: 1.2rem; font-weight: bold; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center; font-family: 'Cairo', sans-serif; }
@@ -42,18 +38,12 @@
     <p>اختر رقم الحلقة وابدأ المشاهدة فوراً</p>
 </header>
 
-<!-- إعلان البنر العلوي -->
-<div class="banner-top">
-    <script> atOptions = { 'key' : 'b8ba5b25ff25e41ea44c2df3a1b05378', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script>
-    <script src="https://www.highperformanceformat.com/b8ba5b25ff25e41ea44c2df3a1b05378/invoke.js"></script>
-</div>
-
 <div class="main-container">
     <a href="https://husamalu637.github.io/Sasuke/" class="back-home-btn">⬅ العودة إلى الرئيسية</a>
 
     <div class="video-wrapper-outer">
         <div id="videoPlayer" class="video-display-area">
-            <div class="responsive-iframe"><iframe id="mainIframe" src="" allowfullscreen allow="autoplay; encrypted-media" scrolling="no"></iframe></div>
+            <div class="responsive-iframe"><iframe id="mainIframe" src="" allowfullscreen allow="autoplay; encrypted-media"></iframe></div>
             <div id="episodeTitle" style="padding: 10px; background: var(--card); font-weight: bold;"></div>
         </div>
     </div>
@@ -63,18 +53,12 @@
     <p class="info-text">جميع حلقات جونكر الـ 26 متوفرة وتعمل بكفاءة عالية</p>
 </div>
 
-<!-- إعلان البنر السفلي -->
-<div class="banner-bottom">
-    <script> atOptions = { 'key' : 'b8ba5b25ff25e41ea44c2df3a1b05378', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} }; </script>
-    <script src="https://www.highperformanceformat.com/b8ba5b25ff25e41ea44c2df3a1b05378/invoke.js"></script>
-</div>
-
 <footer>جميع الحقوق محفوظة - صدى الطفولة &copy; 2026</footer>
 
-<script>
-    const popupAdLink = "https://www.profitablecpmratenetwork.com/e41dj2h87?key=bef514b5ca3fa945e7a3b60e4a9ef21a";
+<!-- كود سكريبت الإعلانات المنبثقة الخاص بك (يعمل تلقائياً عند تفاعل المستخدم) -->
+<script src="https://pl29266276.profitableratecpmnetwork.com/37/9c/25/379c25c3dc70386924751e11786f4647.js"></script>
 
-    // دالة لتحويل رابط يوتيوب العادي إلى رابط تضمين (Embed)
+<script>
     function getEmbedUrl(youtubeUrl) {
         let videoId = "";
         if (youtubeUrl.includes("watch?v=")) {
@@ -85,58 +69,50 @@
         return `https://www.youtube.com/embed/${videoId}?autoplay=1`;
     }
 
-    // روابط حلقات جونكر الـ 26 (بدون شارة البداية، مرتبة من 1 إلى 26)
     const rawEpisodeLinks = [
-        "https://www.youtube.com/watch?v=rlZQOuofmuA", // 1
-        "https://www.youtube.com/watch?v=zVBxg-1k038", // 2
-        "https://www.youtube.com/watch?v=ee96shBNXDs", // 3
-        "https://www.youtube.com/watch?v=U8XEmfaWKzk", // 4
-        "https://www.youtube.com/watch?v=5d0HurcMtjQ", // 5
-        "https://www.youtube.com/watch?v=mjP392TPzR0", // 6
-        "https://www.youtube.com/watch?v=sOM2yv4gDGo", // 7
-        "https://www.youtube.com/watch?v=JTOdES9g_qI", // 8
-        "https://www.youtube.com/watch?v=RWUcpS_UW6s", // 9
-        "https://www.youtube.com/watch?v=KBxWWBQfm_o", // 10
-        "https://www.youtube.com/watch?v=9rOF4R0As6Q", // 11
-        "https://www.youtube.com/watch?v=JYpb5NOFI20", // 12
-        "https://www.youtube.com/watch?v=rdTQbM7oA2o", // 13
-        "https://www.youtube.com/watch?v=04B0nWL5hV0", // 14
-        "https://www.youtube.com/watch?v=fuHQSDkESwA", // 15
-        "https://www.youtube.com/watch?v=ystCFWYMeHU", // 16
-        "https://www.youtube.com/watch?v=8cPUvyfmkn8", // 17
-        "https://www.youtube.com/watch?v=7Jf8fixSPMY", // 18
-        "https://www.youtube.com/watch?v=cojklTqpjXM", // 19
-        "https://www.youtube.com/watch?v=1Mo8Ec55gT0", // 20
-        "https://www.youtube.com/watch?v=L0LZ23Xp6-0", // 21
-        "https://www.youtube.com/watch?v=g2PDgTgTIbc", // 22
-        "https://www.youtube.com/watch?v=wQTnx1eE-58", // 23
-        "https://www.youtube.com/watch?v=RXBaJxfYCIA", // 24
-        "https://www.youtube.com/watch?v=NEtvOSWD3R4", // 25
-        "https://www.youtube.com/watch?v=Odjq5sTYY34"  // 26
+        "https://www.youtube.com/watch?v=rlZQOuofmuA",
+        "https://www.youtube.com/watch?v=zVBxg-1k038",
+        "https://www.youtube.com/watch?v=ee96shBNXDs",
+        "https://www.youtube.com/watch?v=U8XEmfaWKzk",
+        "https://www.youtube.com/watch?v=5d0HurcMtjQ",
+        "https://www.youtube.com/watch?v=mjP392TPzR0",
+        "https://www.youtube.com/watch?v=sOM2yv4gDGo",
+        "https://www.youtube.com/watch?v=JTOdES9g_qI",
+        "https://www.youtube.com/watch?v=RWUcpS_UW6s",
+        "https://www.youtube.com/watch?v=KBxWWBQfm_o",
+        "https://www.youtube.com/watch?v=9rOF4R0As6Q",
+        "https://www.youtube.com/watch?v=JYpb5NOFI20",
+        "https://www.youtube.com/watch?v=rdTQbM7oA2o",
+        "https://www.youtube.com/watch?v=04B0nWL5hV0",
+        "https://www.youtube.com/watch?v=fuHQSDkESwA",
+        "https://www.youtube.com/watch?v=ystCFWYMeHU",
+        "https://www.youtube.com/watch?v=8cPUvyfmkn8",
+        "https://www.youtube.com/watch?v=7Jf8fixSPMY",
+        "https://www.youtube.com/watch?v=cojklTqpjXM",
+        "https://www.youtube.com/watch?v=1Mo8Ec55gT0",
+        "https://www.youtube.com/watch?v=L0LZ23Xp6-0",
+        "https://www.youtube.com/watch?v=g2PDgTgTIbc",
+        "https://www.youtube.com/watch?v=wQTnx1eE-58",
+        "https://www.youtube.com/watch?v=RXBaJxfYCIA",
+        "https://www.youtube.com/watch?v=NEtvOSWD3R4",
+        "https://www.youtube.com/watch?v=Odjq5sTYY34"
     ];
 
     const grid = document.getElementById('buttonsGrid'); 
     const player = document.getElementById('videoPlayer'); 
     const iframe = document.getElementById('mainIframe'); 
     const titleDisp = document.getElementById('episodeTitle');
-    
-    let scrollPosition = 0;
-    function lockPage() { scrollPosition = window.scrollY; document.body.style.position = 'fixed'; document.body.style.top = `-${scrollPosition}px`; document.body.style.width = '100%'; }
-    function unlockPage() { document.body.style.position = ''; document.body.style.top = ''; document.body.style.width = ''; window.scrollTo(0, scrollPosition); }
 
     rawEpisodeLinks.forEach((ytUrl, index) => { 
         const btn = document.createElement('button'); 
         btn.className = 'ep-btn'; 
-        
         let epNum = index + 1;
         btn.innerText = epNum; 
         
         const embedUrl = getEmbedUrl(ytUrl);
 
         btn.onclick = function() { 
-            window.open(popupAdLink, '_blank');
-            
-            lockPage(); 
+            // تشغيل الحلقة وعرض المشغل مباشرة عند النقر
             player.style.display = 'block'; 
             iframe.src = embedUrl; 
             titleDisp.innerText = "أنت تشاهد الآن: جونكر - الحلقة " + epNum; 
@@ -144,7 +120,7 @@
             document.querySelectorAll('.ep-btn').forEach(b => b.classList.remove('active')); 
             btn.classList.add('active'); 
             
-            setTimeout(() => { unlockPage(); }, 500); 
+            player.scrollIntoView({ behavior: 'smooth' });
         }; 
         grid.appendChild(btn); 
     });
